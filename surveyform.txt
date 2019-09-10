@@ -1,0 +1,139 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Survey Form </title>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<style>
+body {
+  background-color: #85b9e9;
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  min-width: 320px;
+}
+  h1 {
+        font-family: Helvetica, monospace;
+        text-align: center;
+    margin-bottom:20px;
+
+  }
+  .righttab{
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+
+
+  }
+  #name{
+    margin-bottom:5px;
+  padding: 10px;
+  }
+  #email{
+    margin-bottom:5px;
+    padding: 10px;
+     }
+  #number{
+    margin-bottom:5px;
+        padding: 10px;
+  }
+  #dropdown{ 
+      margin-bottom:5px;
+      padding: 10px;
+
+}
+  .submit{
+    background-color: #32cd32; /* Green */
+  border: none;
+    text-tranfer:bold;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+    border-radius: 10px;
+  }
+  .dropdown {
+  position: absolute;
+  display: inline-block;
+}
+  #comments{
+margin: 10px 20px 10px 20px;
+padding: 40px 20px 10px 40px;
+    
+  }
+</style>
+  </head>
+  <body>
+<h1 id = "title">  Survey Form </h1>
+<p id="description"> Let us know how we can improve freeCodeCamp </p>
+<form id="survey-form" action="index.php" name= "my form" method="POST"> 
+  <div>
+    <div class="rightTab">
+
+           
+<label id="name-label" for="name">* Name: </label>
+
+      <input id= "name" type="text" placeholder="Enter your Name" required > <br><br> </div>
+    <div class="rightTab">
+  
+<label id="email-label" for="eamil">* Email: </label>
+      <input id="email" type="email" placeholder="Enter a valid email address" required> <br><br></div>
+    <div class="rightTab">
+      
+    <label id="number-label" for="number">* Mobile Number: </label>
+<input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+      <br><br></div>
+    <div class="rightTab">
+    <label for="dropdown" id="dropdown-label"> Select an Option </label>
+   
+      <select class= "dropdown" type="dropdown" id="dropdown" name="dropdown">
+  <option value="student"> Student</option>
+  <option value="Full time work">Full time Work</option>
+  <option value="Full time Learner">Full time Learner</option>
+  <option value="Prefer not to say">Prefer not to say</option>
+</select>
+      <br> <br></div>
+<div class="rightTab">
+  <label> Sex : </label>    
+  <label> <input type="radio" value="male" name="gender"> Male </label>  
+  <label> <input type="radio" value ="female" name="gender"> Female </label>  
+  <label> <input type="radio" value=" not to say" name="gender"> Prefer not to say </label>  
+    </div> <br>
+    <div class="rowtab">
+    <label>Things that should be improved <br>in the future
+      (Check all that apply): </lable> </div><br>
+    <div class="rowtab"
+         <label> <input type="checkbox" value ="frontend project" name="name"> FrontEnd Project checked </label>  </div> <br>
+    <div class="rowtab">
+         <label> <input type="checkbox" value= "backend project" name="name"> Backend Project</label> </div><br> 
+<div class="rowtab">
+     <label> <input type="checkbox" name="name" value=" city meetups"> City Meetups </label> </div><br>
+<div class="rowtab">
+     <label> <input type="checkbox" name="name"value=" opensource community"> OpenSource Community </label></div> <br>
+<div class="rowtab">
+  <label> <input type="checkbox" name="name" value="wiki"> Wiki </label> 
+    </div>
+    </div> <br>
+ <div class="rightTab">
+  
+<label for="comments" id= "comments"> Additional Comments : </label> 
+ <textarea name="comment" form="usrform">Enter your comments here...</textarea>
+
+   <br><br></div>
+  <button id= "submit" class="submit" type="submit">Submit </button>
+
+
+</form>
+</html>
