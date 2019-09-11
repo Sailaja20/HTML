@@ -1,0 +1,233 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Survey Form </title>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<style>
+body {
+  background-color: #e0ffff;
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  min-width: 320px;
+  postion:relative;
+  }
+  h1 {
+        font-family: Helvetica, monospace;
+        text-align: center;
+        font-size: 2em;
+    margin-bottom:20px;
+
+  }
+  .form-outer{
+   background-color: rgb(250, 250, 250);
+  margin: 0 auto;
+  border-radius: 4px;
+  width: 75%;
+  max-width: 900px;
+  padding: 10px;
+  padding-top: 20px;
+    postion:relative;
+  }
+  
+  .fullCard {
+    background-color:rgb(211,211,211);
+    width: 1000px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: auto;
+    padding: 4px;
+    postion:relative;
+     }
+  .righttab{
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+  position: relative;
+    left:70px;
+    }
+  
+  #name{
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+    
+  }
+  #email{
+      height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+     }
+  #number{
+      height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+  }
+  #dropdown{ 
+        height: 30px;
+  width: 200px;
+  padding: 5px;
+  margin: 10px;
+    margin-top:5px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+
+}
+ 
+   #submit{
+    background-color: #32cd32; /* Green */
+  border: none;
+    text-tranfer:bold;
+  color: white;
+  padding: 15px 32px;
+      text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+    border-radius: 10px;
+    margin-left:800px;
+    
+        }
+  #submit:hover{
+    background-color:blue;
+  }
+  #cancel{
+    background-color: #32cd32; /* Green */
+  border: none;
+    text-tranfer:bold;
+  color: white;
+  padding: 15px 32px;
+      text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+    border-radius: 10px;
+    margin-left:450px;
+    position: relative;
+        top: 47px;
+ 
+        }
+    
+
+  .comments{
+ width: 400px;
+margin: 5px 10px 10px 5px;
+padding: 10px 20px 20px 10px;
+    position: relative;
+    top: 10px;
+    
+  }
+  .radio{
+  margin-left: 10px;
+    Padding: 30px;
+  }
+  .checkbox{
+    postion:relative;
+    right:25px;
+  margin-left: 20px;
+    Padding: 30px;
+    
+  }
+</style>
+  </head>
+  <body>
+    <h1 id = "title"> <u> Survey Form </u> </h1>
+    <div id="form-outer">
+   <div class="fullCard" id="thumbnail">
+  <div class="cardContent">
+    <div class="cardText">
+<p id="description"> Let us know how we can improve freeCodeCamp </p>
+
+    <form id="survey-form" action="index.php" name= "my form" method="POST"> 
+  <div>
+        <div class="rowtab">
+
+    <div class="righttab">
+
+     <label id="name-label" for="name">* Name: </label>
+      <input id="name" type="text" class= "name" placeholder="Enter your name" required>
+      <br><br> </div></div>
+        <div class="rowtab">
+    <div class="righttab">
+  
+<label id="email-label" for="email">* Email: </label>
+      <input id="email" type="email" class= "input-text" placeholder="Enter a valid email address" required> <br><br></div></div>
+            <div class="rowtab">
+    <div class="righttab">
+      
+    <label id="number-label" for="number">* Age: </label>
+<input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+      <br><br></div></div>
+            <div class="rowtab">
+    <div class="righttab">
+    <label for="dropdown" id="dropdown-label"> Select an Option :</label>
+   
+      <select class= "dropdown" type="dropdown" id="dropdown" name="dropdown">
+   <option value="default"> Select an Option</option>
+  <option value="student"> Student</option>
+  <option value="Full time work">Full time Work</option>
+  <option value="Full time Learner">Full time Learner</option>
+  <option value="Prefer not to say">Prefer not to say</option>
+</select>
+      <br> <br></div></div>
+            <div class="rowtab">
+<div class="righttab">
+  <label> Sex : </label>  
+  <u1>
+  <l1><label> <input type="radio" class= radio name="gender" value="male"> Male </label> </l1>
+  <l1><label> <input type="radio" class= radio name="gender" value ="female"> Female </label> </l1>
+   <l1><label> <input type="radio" class= radio name="gender" value=" not to say"> Prefer not to say </label>  </l1>
+    </ul></div> <br><br>
+    <div class="rowtab">
+    <div class="righttab">
+    <label> Things that should be improved in the future (Check all that apply): </lable> </div></div><br>
+    <div class="righttab"
+         <ul style="list-style: none;">
+        <l1>
+         <label> <input type="checkbox" class="checkbox" value ="frontend project" name="name"> FrontEnd Project checked </label>  </l1></div> <br>
+    <div class="righttab">
+         <l1> <label> <input type="checkbox" class="checkbox"value= "backend project" name="name"> Backend Project</label> </l1></div><br> 
+<div class="righttab">
+     <l1><label> <input type="checkbox" class="checkbox" name="name" value=" city meetups"> City Meetups </label> </l1></div><br>
+<div class="righttab">
+  </1><label> <input type="checkbox" class="checkbox" name="name"value=" opensource community"> OpenSource Community </label></l1></div> <br>
+<div class="righttab">
+  <l1><label> <input type="checkbox" class="checkbox" name="name" value="wiki"> Wiki </label> 
+  </l1></ul> </div></div>
+    </div> <br>
+    <div class="rowtab">
+ <div class="righttab">
+  <label for="comments" id="comments"> Additional Comments : </label>    
+ <textarea name="comment" class="comments" form="usrform">Enter your comments here...</textarea>
+
+   <br><br></div></div>
+ <button id= "cancel" class="cancel" type="submit">Cancel </button>
+
+  <button id= "submit" class="submit" type="submit">Submit </button>
+
+    </div>
+      </div>
+    </div>
+    </div>
+</form>
+</html>
