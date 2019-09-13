@@ -1,0 +1,224 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<html>
+  <head>
+  <title> Selenium WebDriver Technical Document </title>
+    <style>
+body {
+  background: #FFFFFF;
+  background-color: #C0C0C0;
+  text-align:left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif
+  min-width: 320px;
+  postion:relative;
+  }
+    
+      
+       header{
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+       font-weight: bolder;
+
+      }
+      
+      p{
+      font-type: Arial;
+        fontsize: 1px;
+       }
+      #main-doc{
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  text-align: center;
+  font-size: 2em;
+   position:absolute;
+   margin-left:400px;
+   margin-bottom:110px;
+        top:0px;
+  padding:20px;
+      }
+      h1{
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        background-color:#AAAAAA;
+  text-align: left;
+  font-size: 1em;
+  margin-bottom:0px;
+        margin-left:-260px;
+        padding:20px;
+      }
+        #intro{
+          test-align:left;
+         margin-right:500px;
+
+      }
+      .main-section{
+        font-size:17px;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        text-align:left;
+        margin left : 0px;
+      }
+      #navbar{
+         font-size:15px;
+        font-family: "Book Antiqua", sans-serif;        
+        text-align:left;
+        padding:120px;
+        margin-top:50px;
+        width: 20%;
+
+      }
+      #article-content{ 
+        display: flex;
+      }
+      
+      .out-doc{
+     width: 1200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left:80px;
+    padding-bottom: 1700px;
+    padding-right: 280px;
+
+    text-align:center;
+    postion: relative;
+                        }
+      .code-format{
+        background-color: gray;
+      font-family:Courier, sans-serif;
+      }
+       
+      
+      #navbar li{
+        margin-right:10px;
+        list-style: none;
+        
+      }
+      #navbar header{
+        margin-left:40px;
+      }
+      
+      @media (max-width: 300px) {
+        
+      #main-doc{
+  text-align: center;
+   position:absolute;
+   margin-left:-10px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    
+    
+    <div class="out-doc">
+   <nav id=navbar >
+            <header> <u>Selenium Webdriver</strong></header>
+        <ul>
+          <li><a class="nav-link" href="#Introducing_Webdriver">Introducing Webdriver </a></li><br>
+          <li><a class="nav-link" href="#How_Does_WebDriver_‘Drive’_the_Browser_Compared_to_Selenium-RC?">How Does WebDriver ‘Drive’ the Browser Compared to Selenium-RC?</a></li><br>
+          <li><a class="nav-link" href="#WebDriver_and_the_Selenium-Server">WebDriver and the Selenium-Server</a></li><br>
+          <li><a class="nav-link" href="#Setting_Up_a_Selenium-WebDriver_Project">Setting Up a Selenium-WebDriver Project</a></li><br>
+          <li><a class="nav-link" href="#Java">Java</a></li><br>
+          <li><a class="nav-link" href="#Python">Python</a></li><br>
+          <li><a class="nav-link" href="#Ruby">Ruby</a></li><br>
+          <li><a class="nav-link" href="#Java-Script">Java-Script</a></li><br>
+          <li><a class="nav-link" href="#Perl">Perl</a></li><br>
+        </ul>
+    </nav>
+    <main id="main-doc"> 
+      <h1><u><strong>Selenium WebDriver Technical Document </strong></u></h1><br>
+      
+      
+       <article id="article-content">
+        <class= "newtab">
+       
+      <section class="main-section" id="Introducing_Webdriver">
+        <header> Introducing Webdriver </header><hr>
+        
+          <p>
+            The primary new feature in Selenium 2.0 is the integration of the WebDriver API. WebDriver is designed to provide a simpler, more concise programming interface in addition to addressing some limitations in the Selenium-RC API. Selenium-WebDriver was developed to better support dynamic web pages where elements of a page may change without the page itself being reloaded. WebDriver’s goal is to supply a well-designed object-oriented API that provides improved support for modern advanced web-app testing problems.
+        </p></section>
+            <section class="main-section" id="How_Does_WebDriver_‘Drive’_the_Browser_Compared_to_Selenium-RC?">
+
+    <header>How Does WebDriver ‘Drive’ the Browser Compared to Selenium-RC? </header><hr>
+        <p>
+          Selenium-WebDriver makes direct calls to the browser using each browser’s native support for automation. How these direct calls are made, and the features they support depends on the browser you are using. Information on each ‘browser driver’ is provided later in this chapter.
+        </p>
+        <p>
+          For those familiar with Selenium-RC, this is quite different from what you are used to. Selenium-RC worked the same way for each supported browser. It ‘injected’ javascript functions into the browser when the browser was loaded and then used its javascript to drive the AUT within the browser. WebDriver does not use this technique. Again, it drives the browser directly using the browser’s built in support for automation.
+              </p></section>
+                  <section class="main-section" id="WebDriver_and_the_Selenium-Server">
+
+                    <header> WebDriver and the Selenium-Server </header><hr>
+        <p>
+          You may, or may not, need the Selenium Server, depending on how you intend to use Selenium-WebDriver. If your browser and tests will all run on the same machine, and your tests only use the WebDriver API, then you do not need to run the Selenium-Server; WebDriver will run the browser directly.
+        </p>
+        <p>
+          There are some reasons though to use the Selenium-Server with Selenium-WebDriver.
+        </p>
+        <ul>
+          <li> You are using Selenium-Grid to distribute your tests over multiple machines or virtual machines (VMs). </li>
+          <li> You want to connect to a remote machine that has a particular browser version that is not on your current machine.</li>
+          <li> You are not using the Java bindings (i.e. Python, C#, or Ruby) and would like to use HtmlUnit Driver </li>
+         <li> You want to connect to a remote machine that has a particular browser version that is not on your current machine.<l/i>
+<li>You are not using the Java bindings (i.e. Python, C#, or Ruby) and would like to use HtmlUnit Driver.</li>
+        </ul>
+    </section>
+      <section class="main-section" id="Setting_Up_a_Selenium-WebDriver_Project">
+
+        <header>Setting Up a Selenium-WebDriver Project </header><hr>
+        <p>
+          To install Selenium means to set up a project in a development so you can write a program using Selenium. How you do this depends on your programming language and your development environment.
+        </p>
+      </section>
+      <section class="main-section" id="Java">
+
+        <header><u>Java </u></header>
+        <p>
+         The easiest way to set up a Selenium 2.0 Java project is to use Maven. Maven will download the java bindings (the Selenium 2.0 java client library) and all its dependencies, and will create the project for you, using a maven pom.xml (project configuration) file. Once you’ve done this, you can import the maven project into your preferred IDE, IntelliJ IDEA or Eclipse.
+        </p>
+        <p>
+          First, create a folder to contain your Selenium project files. Then, to use Maven, you need a pom.xml file. This can be created with a text editor. We won’t teach the details of pom.xml files or for using Maven since there are already excellent references on this. Your pom.xml file will look something like this. Create this file in the folder you created for your project.
+        </p>
+        <p>
+                  Be sure you specify the most current version. At the time of writing, the version listed above was the most current, however there were frequent releases immediately after the release of Selenium 2.0. Check the Maven download page for the current release and edit the above dependency accordingly.
+        </p>
+        <p>Now, from a command-line, CD into the project directory and run maven as follows. </p>
+        <code class="code-format"> mvn clean install </code> 
+                    </section>   <br>
+         <section class="main-section" id="Python">
+           <header><u>Python </u></header>
+
+        <p>If you are using Python for test automation then you probably are already familiar with developing in Python. To add Selenium to your Python environment run the following command from a command-line. </p>
+        <code class="code-format"> pip install selenium </code>
+        </section><br>
+          <section class="main-section" id="Ruby">
+        <header><u>Ruby </u></header>
+        <p>If you are using Ruby for test automation then you probably are already familiar with developing in Ruby. To add Selenium to your Ruby environment run the following command from a command-line. </p>
+        <code class="code-format">gem install selenium-webdriver </code>
+        </section><br>
+            <section class="main-section" id="Java-Script">
+              <header><u>Java-Script </u></header>
+        <p>If you are using Java Script for test automation then you probably are already familiar with developing in Java. To add Selenium to your Java environment run the following command from a command-line. </p>
+        <code class="code-format"> npm install selenium-webdriver </code>
+                    </section><br>
+                    <section class="main-section" id="Perl">
+              <header><u>Perl </u></header>
+        <p>If you are using Perl Script for test automation then you probably are already familiar with developing in Perl. To add Selenium to your Perl environment run the following command from a command-line. </p>
+        <code class="code-format"> npm install selenium-webdriver </code>
+                      
+        <p> This will download Selenium and all its dependencies and will add them to the project.     </p>
+        <p>  Finally, import the project into your preferred development environment. For those not familiar with this, we’ve provided an appendix which shows this.  </p>
+      </section>
+       
+          
+      </article>
+          </div>
+      </body>
+  
+</html>
